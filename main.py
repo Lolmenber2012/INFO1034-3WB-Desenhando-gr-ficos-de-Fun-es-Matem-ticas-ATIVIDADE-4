@@ -45,19 +45,22 @@ t.speed(0)
 
 
 #plano Cartesiano
-def cartesiano():
-    t.pu()
-    t.goto(-400,0)
-    t.pd() 
-    t.fd(800)
-    t.stamp() 
+def Plano_Cartesiano():
+        t.color('black')
+        # Eixo dos X
+        t.pu()
+        t.goto(-300, 0)
+        t.pd()
+        t.goto(300, 0)
+        t.stamp()
 
-    t.pu()
-    t.goto(0,-400)
-    t.pd()
-    t.lt(90)
-    t.fd(800)
-    t.stamp() 
+        # Eixo dos Y
+        t.pu()
+        t.goto(0, -300)
+        t.pd()
+        t.goto(0, 300)
+        t.lt(90)
+        t.stamp()
 #---------------------------------
 
 #t.color('red')
@@ -103,7 +106,7 @@ def equação2 ():
     t.pu()
     t.goto(-299,equa2(100))
     t.pd()
-    for x in range(-101, 99):
+    for x in range(-299, 0):
         t.goto(x, equa2(x/50)*10)   
     
 
@@ -157,20 +160,22 @@ def equação6():
 
 
 
-
-cartesiano()
+Plano_Cartesiano()
 equação1()
 t.clear()
-cartesiano()
+Plano_Cartesiano()
+equação2()
+t.clear()
+Plano_Cartesiano()
 equação3()
 t.clear()
-cartesiano()
+Plano_Cartesiano()
 equação4()
 t.clear()
-cartesiano()
+Plano_Cartesiano()
 equação5()
 t.clear()
-cartesiano()
+Plano_Cartesiano()
 equação6()
 t.clear()
 
